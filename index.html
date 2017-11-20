@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="root">
+        <ul>
+            <li v-for="name in names">{{ name }}</li>
+        </ul>
+
+        <input type="text" id="input" v-model="newName">
+        <button v-on:click="addName">Add</button>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#root',
+            data: {
+                newName: '',
+                names: ['Coki','Sulung','Robby','Jack']
+            },
+            methods: {
+                addName(){
+                    this.names.push(this.newName);
+
+                    this.newName = '';
+                }
+            },
+        });
+    </script>
+</body>
+</html>
