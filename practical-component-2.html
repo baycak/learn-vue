@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Practical Component 1 - Message</title>
+        <title>Practical Component 2 - Modal</title>
         <script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
@@ -17,10 +17,13 @@
 
         <div id="root">
 
-            <message header="Hello World" body="Lorem ipsum dolor sit amet."></message>
-            <message header="Hello Universe" body="Lorem ipsum dolor sit amet."></message>
-            <message header="Hello Mars" body="Lorem ipsum dolor sit amet."></message>
+			<modal v-show="showModal" @close="showModal = false">
+				<p>
+					Laboris quis quis esse mollit exercitation culpa nisi non eiusmod incididunt excepteur nostrud nostrud incididunt dolor voluptate in officia cupidatat laborum do ullamco incididunt nulla nulla nostrud.
+				</p>
+			</modal>
 
+			<button @click="showModal = true">Show Modal</button>
         </div>
 
         <script src="components/main.js"></script>

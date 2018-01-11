@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Practical Component 1 - Message</title>
+        <title>Component Communication 2 - Event Dispatcher</title>
         <script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
@@ -17,9 +17,7 @@
 
         <div id="root">
 
-            <message header="Hello World" body="Lorem ipsum dolor sit amet."></message>
-            <message header="Hello Universe" body="Lorem ipsum dolor sit amet."></message>
-            <message header="Hello Mars" body="Lorem ipsum dolor sit amet."></message>
+			<coupon-2 @applied="onCouponApplied2"></coupon-2>
 
         </div>
 
